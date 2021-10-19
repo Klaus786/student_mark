@@ -13,8 +13,12 @@ import java.util.stream.Collectors;
  */
 @Service
 public class StudentServiceImpl implements StudentService {
-    @Autowired
-    private StudentRepository repository;
+    private final StudentRepository repository;
+
+    public StudentServiceImpl(StudentRepository repository) {
+        this.repository = repository;
+    }
+
     @Override
     public Student create(Student student){
         return this.repository.save(student);
