@@ -12,23 +12,23 @@ import java.util.Set;
 public class StudentController {
     @Autowired
     private StudentService service;
-    @GetMapping("/list")
+    @GetMapping("student/list")
     public Set<Student> list(){
      return  service.getAll();
     }
 
-    @PostMapping("/create")
+    @PostMapping("student/create")
     @ResponseStatus(HttpStatus.CREATED)
     public Student create(@RequestBody Student student){
         return service.create(student);
     }
 
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "student/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void delete(@PathVariable("id") int id) {
         service.delete(id);
     }
-    @PutMapping(value = "/{id}")
+    @PutMapping(value = "student/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void update(@PathVariable( "id" ) int id, @RequestBody Student student) {
        // Preconditions.checkNotNull(resource);

@@ -11,16 +11,10 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="student_id")
     private int studentId;
-
-
     private String  studentName;
-
     private long  studentPhoneNumber;
-
     private String  studentEmail;
-
     private String  studentPassword;
-
     private String  studentAddress;
 
     public Student(Builder builder) {
@@ -74,7 +68,7 @@ public class Student {
     public static class Builder{
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        //private int id;
+        private int id;
         @Column(name="student_id")
         private int studentId;
         @Column(name="student_name")
