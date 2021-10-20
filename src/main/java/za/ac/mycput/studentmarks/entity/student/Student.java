@@ -17,14 +17,12 @@ public class Student {
     private String  studentName;
     private long  studentPhoneNumber;
     private String  studentEmail;
-    private String  studentPassword;
     private String  studentAddress;
 
     public Student(Builder builder) {
         this.studentId= builder.studentId;
         this.studentName=builder.studentName;
         this.studentEmail= builder.studentEmail;
-        this.studentPassword= builder.studentPassword;
         this.studentPhoneNumber=builder.studentPhoneNumber;
         this.studentAddress=builder.studentAddress;
     }
@@ -52,9 +50,6 @@ public class Student {
         return studentEmail;
     }
 
-    public String getStudentPassword() {
-        return studentPassword;
-    }
 
     public String getStudentAddress() {
         return studentAddress;
@@ -67,7 +62,7 @@ public class Student {
                 ", studentName='" + studentName + '\'' +
                 ", studentPhoneNumber='" + studentPhoneNumber + '\'' +
                 ", studentEmail='" + studentEmail + '\'' +
-                ", studentPassword='" + studentPassword + '\'' +
+                '\'' +
                 ", studentAddress='" + studentAddress + '\'' +
                 '}';
     }
@@ -84,8 +79,6 @@ public class Student {
         private long  studentPhoneNumber;
         @Column(name="student_email")
         private String  studentEmail;
-        @Column(name="student_password")
-        private String  studentPassword;
         @Column(name="student_address")
         private String  studentAddress;
 
@@ -112,10 +105,7 @@ public class Student {
             this.studentEmail= studentEmail;
             return this;
         }
-        public Builder setStudentPassword(String studentPassword){
-            this.studentPassword= studentPassword;
-            return this;
-        }
+
         public Builder setStudentAddress(String studentAddress){
             this.studentAddress= studentAddress;
             return this;
@@ -127,7 +117,6 @@ public class Student {
             this.studentName=student.studentName;
             this.studentPhoneNumber=student.studentPhoneNumber;
             this.studentEmail=student.studentEmail;
-            this.studentPassword=student.studentPassword;
             this.studentAddress=student.studentAddress;
 
             return this;
