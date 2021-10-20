@@ -1,10 +1,13 @@
-package za.ac.mycput.studentmarks.entity.student;
-import javax.persistence.*;
+
 /*
- * author:marco Mulondayi
- * 219049505
- *
+    Author: MMC Tshikuna (218319363)
+    Date: 15 October 2021
  */
+package za.ac.mycput.studentmarks.entity.student;
+
+
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="student")
@@ -13,7 +16,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="student_id")
     private int studentId;
-    private long  studentNumber;
+    private long studentNumber;
     private String  studentName;
     private long  studentPhoneNumber;
     private String  studentEmail;
@@ -22,6 +25,7 @@ public class Student {
 
     public Student(Builder builder) {
         this.studentId= builder.studentId;
+        this.studentNumber= builder.studentNumber;
         this.studentName=builder.studentName;
         this.studentEmail= builder.studentEmail;
         this.studentPassword= builder.studentPassword;
@@ -36,6 +40,7 @@ public class Student {
     public int getStudentId() {
         return studentId;
     }
+
     public long getStudentNumber() {
         return studentNumber;
     }
@@ -64,20 +69,23 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "studentId=" + studentId +
+                ", studentNumber=" + studentNumber +
                 ", studentName='" + studentName + '\'' +
-                ", studentPhoneNumber='" + studentPhoneNumber + '\'' +
+                ", studentPhoneNumber=" + studentPhoneNumber +
                 ", studentEmail='" + studentEmail + '\'' +
                 ", studentPassword='" + studentPassword + '\'' +
                 ", studentAddress='" + studentAddress + '\'' +
                 '}';
     }
+
     public static class Builder{
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
+        private int id;
         @Column(name="student_id")
         private int studentId;
         @Column(name="student_number")
-        private long  studentNumber;
+        private long studentNumber;
         @Column(name="student_name")
         private String  studentName;
         @Column(name="student_phone_number")
@@ -95,14 +103,14 @@ public class Student {
             this.studentId= studentId;
             return this;
         }
-        public Builder setStudentNumber(long studentNumber){
-            this.studentNumber= studentNumber;
-            return this;
-        }
 
         public Builder setStudentName(String studentName){
          this.studentName= studentName;
          return this;
+        }
+        public Builder setStudentNumber(long studentNumber){
+            this.studentNumber= studentNumber;
+            return this;
         }
         public Builder setStudentPhoneNumber(long studentPhoneNumber){
             this.studentPhoneNumber= studentPhoneNumber;
@@ -123,7 +131,7 @@ public class Student {
         public Builder copy(Student student){
 
             this.studentId=student.studentId;
-            this.studentNumber=student.studentNumber;
+            this.studentNumber =student.studentNumber;
             this.studentName=student.studentName;
             this.studentPhoneNumber=student.studentPhoneNumber;
             this.studentEmail=student.studentEmail;
