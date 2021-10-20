@@ -11,8 +11,6 @@ public class StudentFactory {
                 .setStudentName(studentName)
                 .setStudentEmail(studentEmail)
                 .setStudentAddress(studentAddress)
-                .setStudentPassword(studentPassword)
-                .setStudentPhoneNumber(studentPhoneNumber)
-                .build();
+                .setStudentPassword(studentPassword).setStudentPhoneNumber(studentPhoneNumber).build();
     }
 }
