@@ -1,4 +1,8 @@
-package za.ac.mycput.studentmarks.service.grade.Impl;
+
+/*
+    Author: MMC Tshikuna (218319363)
+    Date: 15 October 2021
+ */package za.ac.mycput.studentmarks.service.grade.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

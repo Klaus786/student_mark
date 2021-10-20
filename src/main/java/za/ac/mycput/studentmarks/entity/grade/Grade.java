@@ -2,6 +2,10 @@ package za.ac.mycput.studentmarks.entity.grade;
 
 import javax.persistence.*;
 import java.io.Serializable;
+/*
+    Author: MMC Tshikuna (218319363)
+    Date: 15 October 2021
+ */
 
 
 @Entity
