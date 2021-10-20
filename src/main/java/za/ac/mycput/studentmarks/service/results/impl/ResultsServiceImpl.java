@@ -4,7 +4,11 @@ package za.ac.mycput.studentmarks.service.results.impl;
     Author: Lwazi Tomson (218204493)
     Date: 10 October 2021
  */
+<<<<<<< HEAD
 import org.springframework.stereotype.Service;
+=======
+import za.ac.mycput.studentmarks.entity.grade.Grade;
+>>>>>>> 3a06c547baf29ad89aa5175950c4ae176a119222
 import za.ac.mycput.studentmarks.entity.results.Results;
 import za.ac.mycput.studentmarks.repository.results.ResultsRepository;
 import za.ac.mycput.studentmarks.service.results.IResultsService;

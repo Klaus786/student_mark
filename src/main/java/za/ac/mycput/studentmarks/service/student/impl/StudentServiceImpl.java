@@ -1,6 +1,7 @@
 package za.ac.mycput.studentmarks.service.student.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import za.ac.mycput.studentmarks.entity.grade.Grade;
 import za.ac.mycput.studentmarks.entity.student.Student;
 import za.ac.mycput.studentmarks.repository.student.StudentRepository;
 import za.ac.mycput.studentmarks.service.student.StudentService;
@@ -13,8 +14,12 @@ import java.util.stream.Collectors;
  */
 @Service
 public class StudentServiceImpl implements StudentService {
-    @Autowired
-    private StudentRepository repository;
+    private final StudentRepository repository;
+
+    public StudentServiceImpl(StudentRepository repository) {
+        this.repository = repository;
+    }
+
     @Override
     public Student create(Student student){
         return this.repository.save(student);

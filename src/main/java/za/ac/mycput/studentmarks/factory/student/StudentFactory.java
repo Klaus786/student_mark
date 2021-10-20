@@ -6,11 +6,15 @@ import za.ac.mycput.studentmarks.entity.student.Student;
  *
  */
 public class StudentFactory {
-    public static Student createStudent(  long studentNumber, String  studentName, long  studentPhoneNumber, String  studentEmail, String  studentPassword, String  studentAddress){
-        return new Student.Builder().setStudentNumber(studentNumber)
+    public static Student createStudent(int studentId,long studentNumber, String  studentName, long  studentPhoneNumber, String  studentEmail, String  studentPassword, String  studentAddress){
+        return new Student.Builder()
+                .setStudentId(studentId)
+                .setStudentNumber(studentNumber)
                 .setStudentName(studentName)
                 .setStudentEmail(studentEmail)
                 .setStudentAddress(studentAddress)
-                .setStudentPassword(studentPassword).setStudentPhoneNumber(studentPhoneNumber).build();
+                .setStudentPassword(studentPassword)
+                .setStudentPhoneNumber(studentPhoneNumber)
+                .build();
     }
 }
