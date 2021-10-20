@@ -4,13 +4,17 @@ package za.ac.mycput.studentmarks.service.results.impl;
     Author: Lwazi Tomson (218204493)
     Date: 10 October 2021
  */
+
+import org.springframework.stereotype.Service;
+import za.ac.mycput.studentmarks.entity.grade.Grade;
+
 import za.ac.mycput.studentmarks.entity.grade.Grade;
 import za.ac.mycput.studentmarks.entity.results.Results;
 import za.ac.mycput.studentmarks.repository.results.ResultsRepository;
 import za.ac.mycput.studentmarks.service.results.IResultsService;
 
 import java.util.Set;
-
+@Service
 public class ResultsServiceImpl implements IResultsService {
 
     private static ResultsServiceImpl resultsService = null;

@@ -12,7 +12,4 @@ public class StudentMarksApplication {
     public static void main(String[] args) {
         SpringApplication.run(StudentMarksApplication.class, args);
     }
-
-
-
 }
